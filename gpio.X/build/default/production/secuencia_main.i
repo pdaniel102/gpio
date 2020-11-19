@@ -5705,11 +5705,6 @@ int main(void) {
     INTCON2bits.RBPU = 0;
     while (1) {
 
-        if (!PORTBbits.RB7) {
-            _delay((unsigned long)((50)*(8000000/4000.0)));
-            if(++efecto==7){efecto=1;}
-        }
-
         switch (efecto) {
             case 1: secuencial_Efecto1();
                 break;
@@ -5740,6 +5735,12 @@ void secuencial_Efecto1(void) {
             _delay((unsigned long)((50)*(8000000/4000.0)));
             if(++velocidad==5){velocidad=1;}
         }
+
+        if (!PORTBbits.RB7) {
+            _delay((unsigned long)((50)*(8000000/4000.0)));
+            if(++efecto==7){efecto=1;}
+            return;
+        }
     }
 }
 
@@ -5755,6 +5756,12 @@ void secuencial_Efecto2(void) {
             _delay((unsigned long)((50)*(8000000/4000.0)));
             if(++velocidad==5){velocidad=1;}
         }
+
+        if (!PORTBbits.RB7) {
+            _delay((unsigned long)((50)*(8000000/4000.0)));
+            if(++efecto==7){efecto=1;}
+            return;
+        }
     }
 }
 
@@ -5769,6 +5776,12 @@ void secuencial_Efecto3(void) {
         if (!PORTBbits.RB6) {
             _delay((unsigned long)((50)*(8000000/4000.0)));
             if(++velocidad==5){velocidad=1;}
+        }
+
+        if (!PORTBbits.RB7) {
+            _delay((unsigned long)((50)*(8000000/4000.0)));
+            if(++efecto==7){efecto=1;}
+            return;
         }
     }
 }
@@ -5788,6 +5801,12 @@ void secuencial_Efecto4(void) {
             _delay((unsigned long)((50)*(8000000/4000.0)));
             if(++velocidad==5){velocidad=1;}
         }
+
+        if (!PORTBbits.RB7) {
+            _delay((unsigned long)((50)*(8000000/4000.0)));
+            if(++efecto==7){efecto=1;}
+            return;
+        }
     }
 }
 
@@ -5804,6 +5823,12 @@ void secuencial_Efecto5(void) {
           _delay((unsigned long)((50)*(8000000/4000.0)));
             if(++velocidad==5){velocidad=1;}
         }
+
+        if (!PORTBbits.RB7) {
+            _delay((unsigned long)((50)*(8000000/4000.0)));
+            if(++efecto==7){efecto=1;}
+            return;
+        }
     }
 
     for (int j = 6; j > 0; j--) {
@@ -5817,6 +5842,12 @@ void secuencial_Efecto5(void) {
         if (!PORTBbits.RB6) {
             _delay((unsigned long)((50)*(8000000/4000.0)));
             if(++velocidad==5){velocidad=1;}
+        }
+
+        if (!PORTBbits.RB7) {
+            _delay((unsigned long)((50)*(8000000/4000.0)));
+            if(++efecto==7){efecto=1;}
+            return;
         }
     }
 
@@ -5838,6 +5869,12 @@ void secuencial_Efecto6(void) {
         if (!PORTBbits.RB6) {
             _delay((unsigned long)((50)*(8000000/4000.0)));
             if(++velocidad==5){velocidad=1;}
+        }
+
+        if (!PORTBbits.RB7) {
+            _delay((unsigned long)((50)*(8000000/4000.0)));
+            if(++efecto==7){efecto=1;}
+            return;
         }
     }
 }

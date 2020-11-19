@@ -39,11 +39,6 @@ int main(void) {
     TRISBbits.TRISB6 = 1; //lo coloque en 1 porque pienso que es de entrada
     INTCON2bits.RBPU = 0;
     while (1) {
-        //efecto
-        if (!PORTBbits.RB7) { //Aqui evalua si se esta pulsando el efecto, la cuestion para un cambio en tiempo real es evaluar durante la llama de las funciones que reaizan los efectos
-            __delay_ms(50);
-            if(++efecto==7){efecto=1;}
-        }
         
         switch (efecto) {
             case 1: secuencial_Efecto1();
@@ -76,7 +71,7 @@ void secuencial_Efecto1(void) {
             if(++velocidad==5){velocidad=1;}
         }
         //Efecto
-        if (!PORTBbits.RB7) {
+        if (!PORTBbits.RB7) {//Aqui evalua si se esta pulsando el efecto, la cuestion para un cambio en tiempo real es evaluar durante la llama de las funciones que reaizan los efectos
             __delay_ms(50);
             if(++efecto==7){efecto=1;}
             return;
