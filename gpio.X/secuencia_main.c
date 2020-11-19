@@ -75,6 +75,12 @@ void secuencial_Efecto1(void) {
             __delay_ms(50);
             if(++velocidad==5){velocidad=1;}
         }
+        //Efecto
+        if (!PORTBbits.RB7) {
+            __delay_ms(50);
+            if(++efecto==7){efecto=1;}
+            return;
+        }
     }
 }
 
@@ -90,6 +96,12 @@ void secuencial_Efecto2(void) {
             __delay_ms(50);
             if(++velocidad==5){velocidad=1;}
         }
+        //Efecto
+        if (!PORTBbits.RB7) {
+            __delay_ms(50);
+            if(++efecto==7){efecto=1;}
+            return;
+        }
     }
 }
 
@@ -104,6 +116,12 @@ void secuencial_Efecto3(void) {
         if (!PORTBbits.RB6) {
             __delay_ms(50);
             if(++velocidad==5){velocidad=1;}
+        }
+        //Efecto
+        if (!PORTBbits.RB7) {
+            __delay_ms(50);
+            if(++efecto==7){efecto=1;}
+            return;
         }
     }
 }
@@ -123,6 +141,12 @@ void secuencial_Efecto4(void) {
             __delay_ms(50);
             if(++velocidad==5){velocidad=1;}
         }
+        //Efecto
+        if (!PORTBbits.RB7) {
+            __delay_ms(50);
+            if(++efecto==7){efecto=1;}
+            return;
+        }
     }
 }
 
@@ -139,6 +163,12 @@ void secuencial_Efecto5(void) { //Efecto de "trencito"
           __delay_ms(50);
             if(++velocidad==5){velocidad=1;}
         }
+       //Efecto
+        if (!PORTBbits.RB7) {
+            __delay_ms(50);
+            if(++efecto==7){efecto=1;}
+            return;
+        }
     }
     
     for (int j = 6; j > 0; j--) {
@@ -152,6 +182,12 @@ void secuencial_Efecto5(void) { //Efecto de "trencito"
         if (!PORTBbits.RB6) {
             __delay_ms(50);
             if(++velocidad==5){velocidad=1;}
+        }
+        //Efecto
+        if (!PORTBbits.RB7) {
+            __delay_ms(50);
+            if(++efecto==7){efecto=1;}
+            return;
         }
     }
     
@@ -173,6 +209,12 @@ void secuencial_Efecto6(void) { //"Efecto alternado"
         if (!PORTBbits.RB6) {
             __delay_ms(50);
             if(++velocidad==5){velocidad=1;}
+        }
+        //Efecto
+        if (!PORTBbits.RB7) {
+            __delay_ms(50);
+            if(++efecto==7){efecto=1;}
+            return;
         }
     }
 }
